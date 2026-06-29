@@ -9,13 +9,13 @@ import { createOpenGraph } from "@/lib/metadata";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Start a project with Mode Code for websites, AI tools and automation systems.",
+    "Start a project with Mode Code for websites, AI tools, automation systems or production-aware prototypes.",
   alternates: {
     canonical: "/contact/"
   },
   openGraph: createOpenGraph(
     "Contact Mode Code",
-    "Talk to Mode Code about websites, AI tools and automation systems.",
+    "Talk to Mode Code about websites, AI tools, automation systems or production-aware prototypes.",
     "/contact/"
   )
 };
@@ -96,6 +96,7 @@ export default function ContactPage() {
               <option>AI tool</option>
               <option>Automation</option>
               <option>MVP</option>
+              <option>Design for Manufacturing</option>
               <option>Not sure yet</option>
             </select>
           </label>

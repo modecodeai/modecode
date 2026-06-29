@@ -6,22 +6,27 @@ import { SectionLabel } from "@/components/section-label";
 import { ServiceCard } from "@/components/service-card";
 import {
   caseStudies,
+  manufacturingCapabilities,
+  prototypeSnippet,
   processSteps,
+  productIdeaSnippet,
   services,
   workflowSnippet
 } from "@/lib/site-content";
 import { createOpenGraph } from "@/lib/metadata";
 
 export const metadata: Metadata = {
-  title: "Software for businesses that need things to work",
+  title: {
+    absolute: "Mode Code | Websites, AI Tools, Automation & Product Prototyping"
+  },
   description:
-    "Mode Code builds clean websites, useful AI tools and automation systems for service-led businesses.",
+    "Mode Code builds clean websites, useful AI tools, automation systems and production-aware prototypes, including CAD, CNC-aware design and 3D printing support.",
   alternates: {
     canonical: "/"
   },
   openGraph: createOpenGraph(
-    "Software for businesses that need things to work",
-    "Mode Code builds clean websites, useful AI tools and automation systems for service-led businesses.",
+    "Mode Code | Websites, AI Tools, Automation & Product Prototyping",
+    "Mode Code builds clean websites, useful AI tools, automation systems and production-aware prototypes.",
     "/"
   )
 };
@@ -42,14 +47,16 @@ service.stack.map(input)`}</pre>
         <div className="mx-auto grid min-h-[calc(100vh-88px)] max-w-7xl items-center gap-12 px-6 py-20 sm:px-8 lg:grid-cols-[1fr_420px] lg:px-10">
           <div className="relative z-10 max-w-4xl">
             <p className="mb-5 font-mono text-xs text-graphite-500">
-              Software, AI automation and web development studio
+              Software, AI automation, web development and product prototyping
+              studio
             </p>
             <h1 className="max-w-4xl text-5xl font-medium leading-[1.02] text-graphite-950 sm:text-6xl lg:text-7xl">
               Software for businesses that need things to work.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-graphite-600 sm:text-xl">
-              Mode Code builds clean websites, useful AI tools and automation
-              systems for service-led businesses.
+              Mode Code builds clean websites, useful AI tools, automation
+              systems and production-aware prototypes for digital and physical
+              ideas.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/contact/">Start a project</ButtonLink>
@@ -66,6 +73,7 @@ service.stack.map(input)`}</pre>
   website: "clear",
   automation: "useful",
   ai: "practical",
+  prototype: "testable",
 })`}
             />
           </div>
@@ -97,6 +105,35 @@ service.stack.map(input)`}</pre>
                 <ServiceCard key={service.title} {...service} />
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-graphite-200/80 bg-white/60">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-10 lg:py-32">
+          <div>
+            <SectionLabel>Physical ideas</SectionLabel>
+            <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight text-graphite-950 sm:text-4xl">
+              From digital systems to physical prototypes.
+            </h2>
+            <p className="mt-6 max-w-2xl leading-7 text-graphite-600">
+              Mode Code works across both software and making. Alongside
+              websites, AI tools and automation, we support early-stage physical
+              product ideas with CAD modelling, CNC-aware design, 3D printing
+              and prototyping. The aim is simple: help ideas become clear,
+              testable and ready for the next stage.
+            </p>
+            <ul className="mt-8 grid gap-3 text-sm text-graphite-600 sm:grid-cols-2">
+              {manufacturingCapabilities.slice(0, 6).map((item) => (
+                <li key={item} className="border-l border-graphite-300 pl-3">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="grid content-start gap-4">
+            <CodeFragment label="prototype" snippet={prototypeSnippet} />
+            <CodeFragment label="product" snippet={productIdeaSnippet} />
           </div>
         </div>
       </section>

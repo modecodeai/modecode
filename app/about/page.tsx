@@ -9,13 +9,13 @@ import { processSteps } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Mode Code is a software, AI automation and web development studio for service-led businesses.",
+    "Mode Code is a software, AI automation, web development and production-aware prototyping studio.",
   alternates: {
     canonical: "/about/"
   },
   openGraph: createOpenGraph(
     "About Mode Code",
-    "A software, AI automation and web development studio building practical systems for service-led businesses.",
+    "A software, AI automation, web development and production-aware prototyping studio for digital and physical ideas.",
     "/about/"
   )
 };
@@ -34,9 +34,9 @@ export default function AboutPage() {
           </div>
           <div>
             <p className="text-lg leading-8 text-graphite-600">
-              Mode Code builds clean websites, useful AI tools and automation
-              systems for teams that care less about novelty and more about
-              dependable outcomes.
+              Mode Code builds clean websites, useful AI tools, automation
+              systems and production-aware prototypes for teams that care less
+              about novelty and more about dependable outcomes.
             </p>
             <div className="mt-10">
               <CodeFragment

@@ -1,6 +1,6 @@
 # Mode Code Website
 
-Minimal Next.js App Router website for Mode Code, built with TypeScript and Tailwind CSS.
+Minimal Next.js App Router website for Mode Code, built with TypeScript and Tailwind CSS. Mode Code covers websites, AI tools, automation systems and production-aware prototyping.
 
 ## Run locally
 

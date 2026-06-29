@@ -7,25 +7,25 @@ import { createOpenGraph, siteUrl } from "@/lib/metadata";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Mode Code | Software, AI automation and web development studio",
+    default: "Mode Code | Websites, AI Tools, Automation & Product Prototyping",
     template: "%s | Mode Code"
   },
   description:
-    "Mode Code builds clean websites, useful AI tools and automation systems for service-led businesses.",
+    "Mode Code builds clean websites, useful AI tools, automation systems and production-aware prototypes, including CAD, CNC-aware design and 3D printing support.",
   applicationName: "Mode Code",
   alternates: {
     canonical: "/"
   },
   openGraph: createOpenGraph(
-    "Mode Code | Software for businesses that need things to work",
-    "Clean websites, useful AI tools and automation systems for service-led businesses.",
+    "Mode Code | Websites, AI Tools, Automation & Product Prototyping",
+    "Mode Code builds clean websites, useful AI tools, automation systems and production-aware prototypes.",
     "/"
   ),
   twitter: {
     card: "summary_large_image",
     title: "Mode Code",
     description:
-      "Software, AI automation and web development for service-led businesses.",
+      "Websites, AI tools, automation systems and production-aware prototypes.",
     images: ["/og-image.svg"]
   },
   robots: {

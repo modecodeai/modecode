@@ -19,7 +19,8 @@ export function SiteFooter() {
             Mode Code
           </Link>
           <p className="mt-2 max-w-md text-sm leading-6 text-graphite-400">
-            Clean websites, useful AI tools and automation systems.
+            Clean websites, useful AI tools, automation systems and
+            production-aware prototypes.
           </p>
           <p className="mt-4 max-w-xl text-xs leading-6 text-graphite-500">
             {companyDetails.legalName} · Company No.{" "}

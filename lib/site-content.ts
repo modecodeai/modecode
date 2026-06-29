@@ -16,9 +16,26 @@ export const services = [
   },
   {
     title: "MVPs",
-    description: "Lean prototypes for testing ideas before overbuilding.",
+    description: "Lean prototypes for testing digital ideas before overbuilding.",
     snippet: "ship({ small: true })"
+  },
+  {
+    title: "Design for Manufacturing",
+    description:
+      "CAD, prototyping and production-aware design for physical products.",
+    snippet: "cad({ measured: true })"
   }
+];
+
+export const manufacturingCapabilities = [
+  "CAD modelling",
+  "CNC-aware design",
+  "3D printing",
+  "Product prototyping",
+  "Material-aware design",
+  "Stonework and fabrication-informed thinking",
+  "Concept-to-manufacture support",
+  "Design refinement for physical production"
 ];
 
 export const caseStudies = [
@@ -48,4 +65,17 @@ export const workflowSnippet = `const workflow = {
   manual: false,
   connected: true,
   useful: true,
+}`;
+
+export const prototypeSnippet = `const prototype = {
+  concept: "clear",
+  model: "measured",
+  material: "considered",
+  output: "testable",
+}`;
+
+export const productIdeaSnippet = `type ProductIdea = {
+  sketch: string
+  cad: boolean
+  prototype: "printed" | "machined" | "refined"
 }`;

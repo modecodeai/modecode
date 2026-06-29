@@ -9,13 +9,13 @@ import { caseStudies } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Selected Mode Code work across service websites, AI workflows and practical digital systems.",
+    "Selected Mode Code work across service websites, AI workflows, practical digital systems and early-stage prototyping.",
   alternates: {
     canonical: "/work/"
   },
   openGraph: createOpenGraph(
     "Mode Code work",
-    "Selected website, service and AI workflow projects from Mode Code.",
+    "Selected website, service, AI workflow and prototyping work from Mode Code.",
     "/work/"
   )
 };

@@ -4,18 +4,24 @@ import { CodeFragment } from "@/components/code-fragment";
 import { SectionLabel } from "@/components/section-label";
 import { ServiceCard } from "@/components/service-card";
 import { createOpenGraph } from "@/lib/metadata";
-import { services, workflowSnippet } from "@/lib/site-content";
+import {
+  manufacturingCapabilities,
+  prototypeSnippet,
+  productIdeaSnippet,
+  services,
+  workflowSnippet
+} from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Websites, AI tools, automation systems and MVPs for service-led businesses.",
+    "Websites, AI tools, automation systems, MVPs and production-aware prototypes for digital and physical ideas.",
   alternates: {
     canonical: "/services/"
   },
   openGraph: createOpenGraph(
     "Mode Code services",
-    "Clean websites, practical AI tools, joined-up automation and lean MVPs.",
+    "Clean websites, practical AI tools, joined-up automation and production-aware prototyping.",
     "/services/"
   )
 };
@@ -28,11 +34,12 @@ export default function ServicesPage() {
           <div>
             <SectionLabel>Services</SectionLabel>
             <h1 className="mt-5 max-w-2xl text-4xl font-medium leading-tight text-graphite-950 sm:text-5xl">
-              Clean technology for businesses that need useful systems.
+              Clean technology for digital workflows and physical ideas.
             </h1>
             <p className="mt-6 max-w-xl leading-7 text-graphite-600">
               Mode Code keeps strategy, interface design and engineering close
-              together so the work stays clear, maintainable and practical.
+              together so software, automation and early-stage prototypes stay
+              clear, maintainable and practical.
             </p>
           </div>
           <CodeFragment
@@ -42,6 +49,7 @@ export default function ServicesPage() {
   website: "clear",
   ai: "practical",
   automation: "connected",
+  prototype: "testable",
 })`}
           />
         </div>
@@ -60,10 +68,40 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <section className="border-b border-graphite-200/80 bg-white/60">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:px-10 lg:py-28">
+          <div>
+            <SectionLabel>Design for Manufacturing</SectionLabel>
+            <h2 className="mt-5 max-w-2xl text-3xl font-medium leading-tight text-graphite-950 sm:text-4xl">
+              CAD, prototyping and manufacturing-aware development.
+            </h2>
+            <p className="mt-5 max-w-2xl leading-7 text-graphite-600">
+              CAD, prototyping and production-aware design for physical
+              products, parts and ideas that need to move from concept to
+              something real.
+            </p>
+            <div className="mt-10 grid gap-4">
+              <CodeFragment label="prototype" snippet={prototypeSnippet} />
+              <CodeFragment label="product" snippet={productIdeaSnippet} />
+            </div>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {manufacturingCapabilities.map((item) => (
+              <div
+                key={item}
+                className="border border-graphite-200 bg-graphite-50/70 p-5 text-sm leading-6 text-graphite-700"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-white/60">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 px-6 py-20 sm:px-8 md:flex-row md:items-center lg:px-10">
           <h2 className="max-w-2xl text-3xl font-medium leading-tight text-graphite-950 sm:text-4xl">
-            Have a workflow or website that needs to work harder?
+            Have a workflow, website or physical idea that needs clearer shape?
           </h2>
           <ButtonLink href="/contact/">Start a project</ButtonLink>
         </div>
