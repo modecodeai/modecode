@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { ButtonLink } from "@/components/button-link";
 import { CompanyDetails } from "@/components/company-details";
+import { ContactForm } from "@/components/contact-form";
 import { CodeFragment } from "@/components/code-fragment";
 import { SectionLabel } from "@/components/section-label";
 import { companyDetails } from "@/lib/company";
@@ -51,82 +51,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <form
-          aria-label="Project enquiry"
-          className="border border-graphite-200 bg-white/80 p-5 shadow-soft sm:p-8"
-        >
-          <div className="grid gap-5 sm:grid-cols-2">
-            <label className="block">
-              <span className="text-sm font-medium text-graphite-800">
-                Name
-              </span>
-              <input
-                className="mt-2 w-full border border-graphite-200 bg-white px-4 py-3 text-base text-graphite-950 outline-none transition focus:border-accent"
-                name="name"
-                type="text"
-                autoComplete="name"
-                required
-              />
-            </label>
-            <label className="block">
-              <span className="text-sm font-medium text-graphite-800">
-                Email
-              </span>
-              <input
-                className="mt-2 w-full border border-graphite-200 bg-white px-4 py-3 text-base text-graphite-950 outline-none transition focus:border-accent"
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-              />
-            </label>
-          </div>
-
-          <label className="mt-5 block">
-            <span className="text-sm font-medium text-graphite-800">
-              Project type
-            </span>
-            <select
-              className="mt-2 w-full border border-graphite-200 bg-white px-4 py-3 text-base text-graphite-950 outline-none transition focus:border-accent"
-              name="projectType"
-              defaultValue=""
-              required
-            >
-              <option value="" disabled>
-                Select one
-              </option>
-              <option>Website</option>
-              <option>AI tool</option>
-              <option>Automation</option>
-              <option>MVP</option>
-              <option>Design for Manufacturing</option>
-              <option>Not sure yet</option>
-            </select>
-          </label>
-
-          <label className="mt-5 block">
-            <span className="text-sm font-medium text-graphite-800">
-              What needs to work better?
-            </span>
-            <textarea
-              className="mt-2 min-h-40 w-full resize-y border border-graphite-200 bg-white px-4 py-3 text-base text-graphite-950 outline-none transition focus:border-accent"
-              name="message"
-              required
-            />
-          </label>
-
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <button
-              className="inline-flex min-h-12 items-center justify-center bg-graphite-950 px-6 py-3 text-sm font-medium text-white transition hover:bg-graphite-800 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
-              type="button"
-            >
-              Send enquiry
-            </button>
-            <ButtonLink href={`mailto:${companyDetails.email}`} variant="secondary">
-              Email directly
-            </ButtonLink>
-          </div>
-        </form>
+        <ContactForm email={companyDetails.email} />
       </div>
     </section>
   );
