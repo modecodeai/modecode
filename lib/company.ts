@@ -17,5 +17,7 @@ export const companyDetails = {
   ]
 };
 
+export const brandTagline = "Websites, AI tools and prototypes built to work.";
+
 export const registeredOfficeInline =
   companyDetails.registeredOffice.join(", ");

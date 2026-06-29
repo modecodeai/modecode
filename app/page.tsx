@@ -4,6 +4,7 @@ import { CaseStudyCard } from "@/components/case-study-card";
 import { CodeFragment } from "@/components/code-fragment";
 import { SectionLabel } from "@/components/section-label";
 import { ServiceCard } from "@/components/service-card";
+import { brandTagline } from "@/lib/company";
 import {
   caseStudies,
   manufacturingCapabilities,
@@ -47,8 +48,7 @@ service.stack.map(input)`}</pre>
         <div className="mx-auto grid min-h-[calc(100vh-88px)] max-w-7xl items-center gap-12 px-6 py-20 sm:px-8 lg:grid-cols-[1fr_420px] lg:px-10">
           <div className="relative z-10 max-w-4xl">
             <p className="mb-5 font-mono text-xs text-graphite-500">
-              Software, AI automation, web development and product prototyping
-              studio
+              {brandTagline}
             </p>
             <h1 className="max-w-4xl text-5xl font-medium leading-[1.02] text-graphite-950 sm:text-6xl lg:text-7xl">
               Software for businesses that need things to work.

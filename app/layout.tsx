@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { brandTagline } from "@/lib/company";
 import { createOpenGraph, siteUrl } from "@/lib/metadata";
 
 export const metadata: Metadata = {
@@ -24,8 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Mode Code",
-    description:
-      "Websites, AI tools, automation systems and production-aware prototypes.",
+    description: brandTagline,
     images: ["/og-image.svg"]
   },
   robots: {

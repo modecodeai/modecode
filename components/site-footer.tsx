@@ -1,5 +1,9 @@
 import Link from "next/link";
-import { companyDetails, registeredOfficeInline } from "@/lib/company";
+import {
+  brandTagline,
+  companyDetails,
+  registeredOfficeInline
+} from "@/lib/company";
 
 const links = [
   { href: "/services/", label: "Services" },
@@ -19,8 +23,7 @@ export function SiteFooter() {
             Mode Code
           </Link>
           <p className="mt-2 max-w-md text-sm leading-6 text-graphite-400">
-            Clean websites, useful AI tools, automation systems and
-            production-aware prototypes.
+            {brandTagline}
           </p>
           <p className="mt-4 max-w-xl text-xs leading-6 text-graphite-500">
             {companyDetails.legalName} · Company No.{" "}
