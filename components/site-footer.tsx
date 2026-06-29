@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   brandTagline,
   companyDetails,
+  portugalTradingAddressInline,
   registeredOfficeInline
 } from "@/lib/company";
 
@@ -28,7 +29,8 @@ export function SiteFooter() {
           <p className="mt-4 max-w-xl text-xs leading-6 text-graphite-500">
             {companyDetails.legalName} · Company No.{" "}
             {companyDetails.companyNumber} · Registered office:{" "}
-            {registeredOfficeInline}
+            {registeredOfficeInline} · Portugal trading address:{" "}
+            {portugalTradingAddressInline}
           </p>
         </div>
         <nav aria-label="Footer">

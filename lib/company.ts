@@ -14,6 +14,12 @@ export const companyDetails = {
     "Burnley",
     "England",
     "BB12 7NG"
+  ],
+  portugalTradingAddress: [
+    "Rua da Carvalha, nº570",
+    "Aldeamento Santa Clara",
+    "2400-441 Leiria",
+    "Portugal"
   ]
 };
 
@@ -21,3 +27,6 @@ export const brandTagline = "Websites, AI tools and prototypes built to work.";
 
 export const registeredOfficeInline =
   companyDetails.registeredOffice.join(", ");
+
+export const portugalTradingAddressInline =
+  companyDetails.portugalTradingAddress.join(", ");

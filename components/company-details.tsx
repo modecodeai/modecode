@@ -1,4 +1,8 @@
-import { companyDetails, registeredOfficeInline } from "@/lib/company";
+import {
+  companyDetails,
+  portugalTradingAddressInline,
+  registeredOfficeInline
+} from "@/lib/company";
 
 type CompanyDetailsProps = {
   compact?: boolean;
@@ -48,6 +52,12 @@ export function CompanyDetails({ compact = false }: CompanyDetailsProps) {
         <div>
           <dt className="font-medium text-graphite-950">Registered office</dt>
           <dd>{registeredOfficeInline}</dd>
+        </div>
+        <div>
+          <dt className="font-medium text-graphite-950">
+            Portugal trading address
+          </dt>
+          <dd>{portugalTradingAddressInline}</dd>
         </div>
         <div>
           <dt className="font-medium text-graphite-950">Website</dt>

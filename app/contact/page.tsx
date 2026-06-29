@@ -44,6 +44,9 @@ export default function ContactPage() {
               />
           </div>
           <div className="mt-6 max-w-sm">
+            <p className="mb-4 text-sm leading-6 text-graphite-600">
+              Mode Code works from Portugal and the UK.
+            </p>
             <CompanyDetails compact />
           </div>
         </div>
