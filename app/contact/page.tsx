@@ -3,7 +3,6 @@ import { CompanyDetails } from "@/components/company-details";
 import { ContactForm } from "@/components/contact-form";
 import { CodeFragment } from "@/components/code-fragment";
 import { SectionLabel } from "@/components/section-label";
-import { companyDetails } from "@/lib/company";
 import { createOpenGraph } from "@/lib/metadata";
 
 export const metadata: Metadata = {
@@ -51,7 +50,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <ContactForm email={companyDetails.email} />
+        <ContactForm />
       </div>
     </section>
   );

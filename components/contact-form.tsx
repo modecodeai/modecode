@@ -1,11 +1,6 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { ButtonLink } from "@/components/button-link";
-
-type ContactFormProps = {
-  email: string;
-};
 
 type FormValues = {
   name: string;
@@ -27,7 +22,7 @@ const initialValues: FormValues = {
   website: ""
 };
 
-export function ContactForm({ email }: ContactFormProps) {
+export function ContactForm() {
   const [values, setValues] = useState<FormValues>(initialValues);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">(
     "idle"
@@ -71,7 +66,7 @@ export function ContactForm({ email }: ContactFormProps) {
       setErrorMessage(
         error instanceof Error
           ? error.message
-          : "Message could not be sent. Please email directly."
+          : "Message could not be sent. Please try again."
       );
     }
   }
@@ -204,9 +199,6 @@ export function ContactForm({ email }: ContactFormProps) {
         >
           {status === "submitting" ? "Sending" : "Send enquiry"}
         </button>
-        <ButtonLink href={`mailto:${email}`} variant="secondary">
-          Email directly
-        </ButtonLink>
       </div>
     </form>
   );
