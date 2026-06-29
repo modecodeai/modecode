@@ -70,6 +70,10 @@ export function CompanyDetails({ compact = false }: CompanyDetailsProps) {
             </a>
           </dd>
         </div>
+        <div>
+          <dt className="font-medium text-graphite-950">Email</dt>
+          <dd>{companyDetails.email}</dd>
+        </div>
       </dl>
     </section>
   );

@@ -6,7 +6,7 @@
     "dev": "next dev",
     "lint": "tsc --noEmit",
     "build": "next build",
-    "deploy:cloudflare": "wrangler pages deploy out --project-name=mode-code --branch=main",
+    "deploy:cloudflare": "wrangler pages deploy out --project-name=modecode --branch=main",
     "start": "next start",
     "typecheck": "tsc --noEmit"
   },

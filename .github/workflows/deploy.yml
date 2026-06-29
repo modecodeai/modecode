@@ -52,7 +52,7 @@ jobs:
           test -f out/_redirects
 
       - name: Deploy to Cloudflare Pages
-        run: pnpm exec wrangler pages deploy out --project-name=mode-code --branch=main
+        run: pnpm exec wrangler pages deploy out --project-name=modecode --branch=main
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
