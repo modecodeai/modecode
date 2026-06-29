@@ -1,0 +1,56 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Build static site
+        run: pnpm build
+
+      - name: Check static export
+        run: |
+          test -d out
+          required_pages=(
+            "index.html"
+            "services/index.html"
+            "work/index.html"
+            "about/index.html"
+            "contact/index.html"
+            "privacy/index.html"
+            "terms/index.html"
+          )
+          for page in "${required_pages[@]}"; do
+            test -f "out/$page"
+          done
+          test -f out/_redirects
+
+      - name: Deploy to Cloudflare Pages
+        run: pnpm exec wrangler pages deploy out --project-name=mode-code --branch=main
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
